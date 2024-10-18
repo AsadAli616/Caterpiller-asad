@@ -1,0 +1,37 @@
+.kol {
+    transform: translateX(-5px);
+    animation: play 2.5s linear infinite ; 
+}
+.pol{
+    transform: translateX(-5px);
+
+}
+.mol{
+    transform: translateX(-20%);
+}
+.lpc{
+    background-image: url("/Group\ 17.png");
+}
+
+.bc{
+    background-image: url("/bg.png");
+    background-repeat: no-repeat;
+}
+.moon{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 30px ;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 30px;
+}
+
+@keyframes play {
+    0% {
+        transform: translateX(-6px);
+    }
+    50% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}

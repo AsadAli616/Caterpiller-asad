@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      blur: {
+        xs: '2px',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

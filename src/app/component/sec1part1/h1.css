@@ -1,0 +1,7 @@
+.lopp{
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 
+   10% , rgba(168,138,221,1) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make text fill color transparent */
+  
+}

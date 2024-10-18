@@ -1,0 +1,31 @@
+
+.imG{
+    transition: transform 0.5s; /* Smooth transition for non-hover state */
+    
+}
+.div1:hover .imG2{
+    box-shadow: -2px 0px 8px 0.5px   #7c52dc;
+
+
+}
+
+.div1:hover .div1{
+    box-shadow: 0px 0px 8px 0.5px #7c52dc;
+}
+
+.div1:hover .imG{
+    animation: rotate 5s linear infinite ; 
+    box-shadow: 0px 0px 8px 0.2px #7c52dc;
+}
+
+
+
+
+@keyframes rotate {
+    0%{
+        
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

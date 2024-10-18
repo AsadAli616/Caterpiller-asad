@@ -1,0 +1,89 @@
+.div1{
+    transform: translateX(100%);
+}
+.div1_trans_enter{
+    animation: slidein .3s linear forwards; /* Adjust duration as needed */
+
+}
+
+
+.div1_trans_leave{
+    background-color: black;
+
+    animation: slideOut .3s linear forwards; /* Adjust duration as needed */
+}
+
+
+
+
+
+
+
+.div2{
+    transform: translateX(100%);
+    
+}
+.div2_trans_enter{
+  
+    animation: slidein .3s linear forwards;
+}
+.div2_trans_leave{
+    animation: slideOut .3s linear forwards;
+
+}
+
+
+.div3{
+    transform: translateX(100%);
+}
+.div3_trans_enter{
+    animation: slidein .3s linear forwards;
+}
+.div3_trans_leave{
+    animation: slideOut .3s linear forwards;
+
+}
+
+
+.div4{
+    transform: translateX(100%);
+}
+.div4_trans_enter{
+    animation: slidein .3s linear forwards;
+}
+.div4_trans_leave{
+    animation: slideOut .3s linear forwards;
+
+}
+.text_1{
+    /* Adjust font size as needed */
+    color: transparent; /* Makes the text color transparent */
+    -webkit-text-stroke: 1px white; /* Stroke width and color */
+    text-stroke: 1px white
+}
+.text_2{
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 
+    10% , rgba(168,138,221,1) );
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+
+
+
+@keyframes slidein {
+    0% {
+        transform: translateX(100%); /* Start at original position */
+    }
+    100% {
+        transform: translateX(0%); /* Move completely off-screen to the left */
+    }
+}
+@keyframes slideOut {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move completely off-screen to the left */
+    }
+}
