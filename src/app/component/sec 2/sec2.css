@@ -2,18 +2,23 @@
     transform: translateX(100%);
 }
 .div1_trans_enter{
-    animation: slidein .3s linear forwards; /* Adjust duration as needed */
+    animation: slidein 1s  linear forwards; /* Adjust duration as needed */
 
 }
 
 
 .div1_trans_leave{
-    background-color: black;
 
-    animation: slideOut .3s linear forwards; /* Adjust duration as needed */
+
+    animation: slideOut 1s linear forwards; /* Adjust duration as needed */
 }
 
-
+.bg{
+    background-image: url("/Group\ 18.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 
 
@@ -25,10 +30,10 @@
 }
 .div2_trans_enter{
   
-    animation: slidein .3s linear forwards;
+    animation: slidein 1s  linear forwards;
 }
 .div2_trans_leave{
-    animation: slideOut .3s linear forwards;
+    animation: slideOut 1s linear forwards;
 
 }
 
@@ -37,10 +42,10 @@
     transform: translateX(100%);
 }
 .div3_trans_enter{
-    animation: slidein .3s linear forwards;
+    animation: slidein 1s  linear forwards;
 }
 .div3_trans_leave{
-    animation: slideOut .3s linear forwards;
+    animation: slideOut 1s linear forwards;
 
 }
 
@@ -49,10 +54,10 @@
     transform: translateX(100%);
 }
 .div4_trans_enter{
-    animation: slidein .3s linear forwards;
+    animation: slidein 1s  linear forwards;
 }
 .div4_trans_leave{
-    animation: slideOut .3s linear forwards;
+    animation: slideOut 1s linear forwards;
 
 }
 .text_1{
@@ -81,7 +86,7 @@
 }
 @keyframes slideOut {
     0% {
-        transform: translateX(0); /* Start at original position */
+        transform: translateX(0); 
     }
     100% {
         transform: translateX(-100%); /* Move completely off-screen to the left */
