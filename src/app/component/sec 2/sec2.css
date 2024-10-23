@@ -14,10 +14,8 @@
 }
 
 .bg{
-    background-image: url("/Group\ 18.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: rgb(13,7,26);
+    background: linear-gradient(180deg, rgba(13,7,26,1) 12%, rgba(114,92,137,1) 56%, rgba(236,230,223,1) 100%);
 }
 
 

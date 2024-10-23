@@ -4,7 +4,7 @@ export default function Sec3(){
     
     
 return(<>
-    <div className=' mx-auto w-[80vw] flex justify-between'>
+    <div className=' mx-auto relative w-[80vw] flex justify-between'>
         <div className='text-[40px] leading-[100px]'>
         <span className=' font-syntheses font-[800] '>Chill Picks: </span>
         <span className='font-[syntheses]'>Shop the Vibe</span>
@@ -50,8 +50,8 @@ return(<>
                 <div className='w-full flex justify-center items-center py-[4vw]'><img className='' src='/Layer 27.png' width={250} /></div>
             </div></div>
         
-    </div>
     <div className='absolute top-[10vw]'><img className='w-[100vw]' src='/shop artwork.png'/></div>
+    </div>
     </>)
   
 }
