@@ -18,8 +18,8 @@ export default function Sec7(){
     </div>
     <div>
     <footer className="text-gray-600 body-font">
-  <div className=" w-fit   mx-auto flex md:items-center py-[3vw] border border-black  md:flex-row-reverse md:flex-nowrap flex-wrap flex-col">
-    <div className="w-1/4 border border-black  md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+  <div className=" lg:w-[75vw]   mx-auto flex  py-[3vw] border border-black  md:flex-row-reverse md:flex-nowrap flex-wrap flex-col">
+    <div className="w-1/4 border border-black  md:mx-0 pt-4 mx-auto  md:text-left md:mt-0 ">
       <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
        <img src="/logo black.png" width={120}/>
       </a>
@@ -31,48 +31,48 @@ export default function Sec7(){
       <div className="lg:w-1/4 md:w-1/2 w-full flex flex-col items-center  border border-black">
         
         <nav className="list-none  ">
-        <h2 className="  text-[18px] text-start lg:py-2 font-[600] ">
+        <h2 className="  text-[14px] text-start lg:py-2 font-[600] ">
           Socials
         </h2>
 
 
 
           <li  className="py-1">
-            <a className="text-gray-600 hover:text-gray-800 text-[14px] leading-[20px]">YOUTUBE</a>
+            <a className="text-gray-600 hover:text-gray-800 text-[12px] leading-[20px]">YOUTUBE</a>
           </li>
           <li  className="py-1">
-            <a className="text-gray-600 hover:text-gray-800 text-[14px] leading-[20px]">TWICH</a>
+            <a className="text-gray-600 hover:text-gray-800 text-[12px] leading-[20px]">TWICH</a>
           </li>
           <li  className="py-1">
-            <a className="text-gray-600 hover:text-gray-800 text-[14px] leading-[20px]">INSTAGRAM</a>
+            <a className="text-gray-600 hover:text-gray-800 text-[12px] leading-[20px]">INSTAGRAM</a>
           </li>
           <li  className="py-1">
-            <a className="text-gray-600 hover:text-gray-800 text-[14px] leading-[20px]">X-TIWTTER</a>
+            <a className="text-gray-600 hover:text-gray-800 text-[12px] leading-[20px]">X-TIWTTER</a>
           </li>
           <li  className="py-1">
-            <a className="text-gray-600 hover:text-gray-800 text-[14px] leading-[20px]">DISCORD</a>
+            <a className="text-gray-600 hover:text-gray-800 text-[12px] leading-[20px]">DISCORD</a>
           </li > 
            <li  className="py-1">
-            <a className="text-black hover:text-gray-800 text-[14px] leading-[20px]">SPOTIFY</a>
+            <a className="text-black hover:text-gray-800 text-[12px] leading-[20px]">SPOTIFY</a>
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4  md:w-1/2 w-full flex flex-col items-center  border border-black ">
       <nav className="list-none text-start  ">
-        <h2 className="text-[18px] text-start lg:py-2 font-[600]">
+        <h2 className="text-[14px] text-start lg:py-2 font-[600]">
           Listen
         </h2>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">LIVE STRAM</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">LIVE STRAM</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">PLAYLIST</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">PLAYLIST</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">REALESE</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">REALESE</a>
           </li>
           
         
@@ -80,17 +80,17 @@ export default function Sec7(){
       </div>
       <div className="lg:w-1/4  md:w-1/2 w-full flex flex-col items-center  border border-black ">
       <nav className="list-none text-start  ">
-        <h2 className="text-[18px] text-start lg:py-2 font-[600]">
+        <h2 className="text-[14px] text-start lg:py-2 font-[600]">
           Listen
         </h2>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">LIVE STRAM</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">LIVE STRAM</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">PLAYLIST</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">PLAYLIST</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">REALESE</a>
           </li>
           
         
@@ -99,17 +99,17 @@ export default function Sec7(){
       <div className="lg:w-1/4  md:w-1/2 w-full flex flex-col items-center  sm:justify-center lg:justify-start border border-black ">
         
         <nav className="list-none text-start  ">
-        <h2 className="text-[18px] text-start lg:py-2 font-[600]">
+        <h2 className="text-[14px] text-start lg:py-2 font-[600]">
           Listen
         </h2>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">LIVE STRAM</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">LIVE STRAM</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">PLAYLIST</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">PLAYLIST</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">REALESE</a>
           </li>
         
         </nav>
@@ -117,7 +117,7 @@ export default function Sec7(){
     </div>
   </div>
   <div className="bg-gray-100  border border-black">
-    <div className="  w-[84vw] py-5 mx-auto  px-5 flex flex-wrap flex-col sm:flex-row">
+    <div className="  w-[84vw] py-2 mx-auto  px-5 flex flex-wrap flex-col sm:flex-row">
       <p className=" text-black font-[600] text-[12px] border border-black sm:text-left">
         © 2024 CATERPILLER ALL RIGHTS SERVED
      
@@ -136,5 +136,7 @@ export default function Sec7(){
     <div>
       
     </div>
+    <div className="flex justify-center py-2 ">
+      <div className="border border-black"><img src="/caterpiller.png"width={180}/></div> <div className="border border-black text-[5.6vw] leading-[8vw] mt-auto font-[800] tracking-tighter mb-4	">Keep smilin'!<img src="/bigheary.png"className="inline w-[5vw] mb-3 mx-1"/></div></div>
     </>
 }
