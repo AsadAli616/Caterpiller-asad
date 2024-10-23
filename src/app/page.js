@@ -18,11 +18,25 @@ export default function Home() {
   return (
     <div className="">
       {/* <Sec1part1/> */}
-      {/* <Sec1/> */}
+            {/* <Sec1/> */}
       {/* <Sec2/> */}
-    {/* <Sec3/> */}
+
+      <div className="h-[65vw]">
+
+<Sec1/>
+</div>
+
+      <div className="h-[70vw]">
+
+<Sec2/>
+</div>      
+    <div className="h-[50vw]">
+
+<Sec3/>
+</div>
+
     {/* <Sec5/> */}
-    <Sec7/>
+    {/* <Sec7/> */}
       {/* <Disc4/> */}
 
    </div>

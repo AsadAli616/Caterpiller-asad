@@ -13,7 +13,7 @@ export default function Sec1()  {
 <Nav/>
     </div>
 
-   <div className='herobanner relative border border-white  '>
+   <div className='herobanner relative    '>
   
 <div className='w-[100%] absolute z-[2]'>
     <img src='/bg.png' className='absolute w-[100%] ' />
@@ -22,7 +22,7 @@ export default function Sec1()  {
 
 
 <div className='w-[100%] absolute z-[3]'>
-    <img src='/Group 17.png' className='absolute w-[100%] ' />
+    <img src='/artwork.png' className='absolute w-[100%] ' />
    
 </div>
 

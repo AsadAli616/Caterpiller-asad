@@ -16,10 +16,10 @@ export default function Sec2(){
   }
 
   return<>
-  <div className="bg  ">
+  <div className="  h-fit ">
 
   
-  <div className=" flex  absolute flex-col w-[100vw] " >
+  <div className=" bg flex  absolute flex-col w-[100vw] " >
     <div className='z-10 text-[50px] text-white  flex mx-auto'>
     <span className=' font-[600] text-white'>Fresh Spins:</span> New Releases
     </div>
@@ -63,11 +63,11 @@ export default function Sec2(){
 </div>
     </div>
 
-<div>
+<div className=''>
   <button className='text-[white] rounded-[50px] bg-[#a88add] text-[14px] py-1 leading-[] w-[80vw] mx-auto flex items-center justify-center ' >Discover the Vibes</button>
 </div>
   </div>
-  <div className="flex justify-center items-center w-[100vw] h-[55vw]" >
+  <div className="flex justify-center border border-black items-center w-[100vw] h-[55vw]" >
   {/* <div className="div0 border-none border-none-black w-[50vw] h-[50vh] absolute"></div> */}
   <div className={trans=="enter1"?"div1_trans_enter border-none    border-none-black w-[100vw] h-[100vh] absolute":   trans=="leave1" ? "div1_trans_leave border-none border-none-black w-[100vw] h-[100vh] absolute" :   "div1 border-none  border-none-black w-[100vw] h-[100vh] absolute"}>
     <div className=' flex flex-col justify-center items-center h-[100%] relative   '>

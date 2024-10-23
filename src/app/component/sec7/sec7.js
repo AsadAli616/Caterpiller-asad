@@ -60,19 +60,19 @@ export default function Sec7(){
       <div className="lg:w-1/4  md:w-1/2 w-full flex flex-col items-center  border border-black ">
       <nav className="list-none text-start  ">
         <h2 className="text-[18px] text-start lg:py-2 font-[600]">
-          Listen
+Quicklinks
         </h2>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">LIVE STRAM</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">HOME</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">PLAYLIST</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">ABOUT</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">BLOG</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">CONTACT</a>
           </li>
           
         
@@ -81,16 +81,16 @@ export default function Sec7(){
       <div className="lg:w-1/4  md:w-1/2 w-full flex flex-col items-center  border border-black ">
       <nav className="list-none text-start  ">
         <h2 className="text-[18px] text-start lg:py-2 font-[600]">
-          Listen
+          Shop
         </h2>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">LIVE STRAM</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">ALL PRODUCT</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">PLAYLIST</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">VINYL</a>
           </li>
           <li className="py-1">
-            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">REALESE</a>
+            <a className="text-gray-600 hover:text-gray-800  text-[14px] leading-[20px]">CD & TAPES</a>
           </li>
           
         
@@ -117,7 +117,7 @@ export default function Sec7(){
     </div>
   </div>
   <div className="bg-gray-100  border border-black">
-    <div className="  w-[84vw] py-5 mx-auto  px-5 flex flex-wrap flex-col sm:flex-row">
+    <div className="  w-[84vw] py-3 mx-auto  px-5 flex flex-wrap flex-col sm:flex-row">
       <p className=" text-black font-[600] text-[12px] border border-black sm:text-left">
         © 2024 CATERPILLER ALL RIGHTS SERVED
      
