@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Nav from "./component/nav/nav";
 import Playpaue from "./component/Playpause/Playpause";
@@ -13,26 +15,116 @@ import Sec3 from "./component/sec3/sec3";
 import Sec5 from "./component/sec5/sec5";
 import Sec7 from "./component/sec7/sec7";
 
+import { gsap } from "gsap";
+    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef,useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+
+
+      const boxRef = useRef(null);
+
+      const boxRef1 = useRef(null);
+            const ballref = useRef(null);
+
+
+
+          useEffect(() => {
+    const pinAnimation = gsap.to(boxRef1.current, {
+      scrollTrigger: {
+        scroller: "body",
+        trigger: boxRef1.current,
+        pin: true,
+        start: 'top top', // Pin when the top of boxRef1 hits the top of the viewport
+        end: '+=800', // Duration of the pin
+        markers: false,
+        onEnter: () => {
+          // Start animation on boxRef when boxRef1 is released
+          
+          animateBox()
+         
+        // alert("asad")
+        },
+      },
+    });
+
+    // Function to animate the first box
+    const animateBox = () => {
+       gsap.to(boxRef.current, {
+        x: "-50%",
+        duration: 10,
+        scrollTrigger: {
+          trigger: boxRef.current,
+          start: 'top top', // When the top of the box reaches the center of the viewport
+          end: 'bottom top', // Duration of the animation
+          scrub: 2,
+          markers: false,
+        },
+      });  
+    }
+const animateball = gsap.to(ballref.current, {
+      y: "20vw",
+      duration: 10, // Increased duration for slower animation
+      scrollTrigger: {
+        trigger: ballref.current,
+        start: 'top center', // When the top of the box reaches the center of the viewport
+        end: 'bottom', // Duration of the animation
+        scrub: 4, // Increased scrub value for smoother scrolling effect
+        markers: false,
+      },
+    });
+     
+   
+
+    return () => {
+      // Clean up ScrollTrigger on component unmount
+      pinAnimation.kill();
+    // animateBox.kill()
+    animateball.kill()
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
+
+
+
+
   return (
     <div className="">
       {/* <Sec1part1/> */}
             {/* <Sec1/> */}
       {/* <Sec2/> */}
-
-      <div className="h-[65vw]">
+{/* <Sec1/> */}
+      {/* <div className="h-[65vw]">
 
 <Sec1/>
 </div>
 
-      <div className="h-[70vw]">
+      <div  className="h-[70vw] pb-16 ">
 
 <Sec2/>
 </div>      
-    <div className="h-[50vw]">
+    <div ref={boxRef1} className=" ">
 
-<Sec3/>
+<Sec3  boxRef={boxRef} />
+</div>
+<div className="h-[65vw] bg-black ">
+
+
+</div> */}
+ <div  className="h-[65vw]">
+
+<Sec1 ballref={ballref} />
+</div>
+
+<div className="bg h-[65vw]   ">
+      <Sec2/>
+</div>
+<div ref={boxRef1}  className="h-[65vw]" >
+<Sec3  boxRef={boxRef} />
 </div>
 
     {/* <Sec5/> */}

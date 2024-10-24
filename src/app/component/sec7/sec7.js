@@ -74,7 +74,9 @@ export default function Sec7(){
           </li>
           <li className="py-1">
             <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">REALESE</a>
-
+</li>
+</nav>
+<nav className="list-none text-start  " >
         <h2 className="text-[18px] text-start lg:py-2 font-[600]">
 
         </h2>
@@ -107,7 +109,7 @@ export default function Sec7(){
           </li>
           <li className="py-1">
             <a className="text-gray-600 hover:text-gray-800  text-[12px] leading-[20px]">REALESE</a>
-
+</li>
         <h2 className="text-[18px] text-start lg:py-2 font-[600]">
           Shop
         </h2>
@@ -159,6 +161,7 @@ export default function Sec7(){
       © 2024 CATERPILLER ALL RIGHTS SERVED
       </span>
     </div>
+  </div>
   </div>
 </footer>
 
