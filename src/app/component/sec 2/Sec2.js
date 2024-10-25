@@ -10,9 +10,13 @@ import './sec2.css'
 import { useState } from "react"
 export default function Sec2(){
     const  [trans , settrans ] = useState("")
+    const  [hover , sethover ] = useState("second")
 
-  function updateTrans(btn){
-    settrans(btn)
+    function updateTrans(btn){
+      settrans(btn)
+    }
+  function hOver(state){
+    sethover(state)
   }
 
   return<>
@@ -20,23 +24,26 @@ export default function Sec2(){
 
   
   <div className="  flex  absolute flex-col w-[100vw] " >
-    <div className='z-10 text-[50px] text-white  flex mx-auto'>
-    <span className=' font-[600] text-white'>Fresh Spins:</span> New Releases
+    <div className='z-10 text-[50px] text-white  flex mx-auto leading-[60px]  my-2'>
+    <span className=' font-[900] tracking-tighter	mx-1 text-white'>Fresh Spins:</span><span className=' font-[500] tracking-tighter	mx-1 text-white'>New Releases</span> 
     </div>
     <div className='flex '>
-<div className=' border-none z-[40] w-full h-[28vw]'>
+<div className=' border-none z-[40] w-full border border-white h-[28vw]'>
   <div className='lg:ml-[-9vw]  lg:mt-[2vw] border-none border-none-red-500'>
-    <Disc4 updateTrans={updateTrans} trans={trans} />
-  </div>
+    <Disc4 hOver={hOver} updateTrans={updateTrans} trans={trans} />
     
+  </div>
+  <div className='  z-10 mt-[-10vw] ml-[3vw]  w-fit'>
+    <Image className={hover =='first'?  'Hoverme rotate-[320deg] ':'Me rotate-[320deg] hidden '} src={"/arroww.png"} width={100} height={100}/></div>  
   
 </div>
 <div className='  border-none z-[40] w-full h-[28vw]'>
   <div className='lg:ml-[1vw] lg:mt-[7vw] border-none border-none-red-500'>
 
-    <Disc2 updateTrans={updateTrans} trans={trans} />
+    <Disc2 hOver={hOver} updateTrans={updateTrans} trans={trans} />
   </div>
-  
+  <div className='  z-10 mt-[-12vw] ml-[29vw]  w-fit'>
+  <Image className={hover== 'second'?'Hoverme rotate-[10deg] ':'Me rotate-[10deg] hidden'} src={"/arroww.png"} width={100} height={100}/></div> 
 </div>
 
     </div>
@@ -46,20 +53,19 @@ export default function Sec2(){
     <div className=' border-none z-[40] w-full h-[28vw]'>
   <div className='lg:ml-[-15vw] lg:mt-[-3vw] border-none border-none-red-500'>
 
-  <Disc3 updateTrans={updateTrans} trans={trans}/>
-  {/* <div className='flex  border-none border-none-black justify-end w-[100%] h-[100%] mt-[15vw] rotate-180 relative'>
+  <Disc3 hOver={hOver} updateTrans={updateTrans} trans={trans}/>
 
-<Image src={"/arroww.png"} width={100} height={100}/>
-  </div> */}
   </div>
-
+  <div className='   z-10 mt-[19vw] ml-[5vw]  w-fit'>
+  <Image className={hover=='third'?'Hoverme rotate-[190deg]': 'Me rotate-[190deg] hidden' } src={"/arroww.png"} width={100} height={100}/></div> 
 </div>
 <div className=' border-none  z-[40]  w-full h-[28vw]'>
   <div className='lg:mt-[5vw] lg:ml-[-4.4vw]  border-none border-none-red-500'>
 
-    <Disc1 updateTrans={updateTrans} trans={trans} />
+    <Disc1 hOver={hOver} updateTrans={updateTrans} trans={trans} />
   </div>
-  
+  <div className='z-10 mt-[9vw] ml-[5vw]  w-fit'>
+  <Image className={hover=='fourth'?'Hoverme rotate-[-70deg]':'Me rotate-[-70deg] hidden'} src={"/arroww.png"} width={100} height={100}/></div> 
 </div>
     </div>
 

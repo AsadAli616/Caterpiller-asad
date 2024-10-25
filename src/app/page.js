@@ -82,7 +82,7 @@ export default function Home() {
     }
 const animateball = gsap.to(ballref.current, {
       y: "20vw",
-      duration: 10, // Increased duration for slower animation
+      duration: 1, // Increased duration for slower animation
       scrollTrigger: {
         trigger: ballref.current,
         start: 'top center', // When the top of the box reaches the center of the viewport

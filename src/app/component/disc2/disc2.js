@@ -3,7 +3,7 @@ import './disc2.css'
 
 import { useState } from "react"
 
-export default function Disc2({updateTrans ,trans})
+export default function Disc2({updateTrans ,trans,setHover,hOver})
     {
     const [rotate ,setrotate] = useState(false)
     console.log(rotate)
@@ -12,7 +12,8 @@ export default function Disc2({updateTrans ,trans})
 
     
     
-    <div onMouseEnter={()=>{updateTrans("enter2")}} onMouseLeave={()=>{updateTrans("leave2")  
+    <div onMouseEnter={()=>{hOver("first")
+      updateTrans("enter2")}} onMouseLeave={()=>{updateTrans("leave2")  
      if(trans=="leave2"){
       setTimeout(()=>{settrans("")},"500")    }}}  className="div1 absolute w-[18vw]   h-[15vw]  ">
         <img className="imG2 absolute z-10" src="/Layer 16.png "/>

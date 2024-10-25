@@ -70,7 +70,13 @@
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
 }
-
+.Hoverme {
+    transition: 1s;
+    animation: HoverMe 2s linear infinite;
+}
+.Me{
+    transition: 2s;
+}
 
 
 
@@ -88,5 +94,16 @@
     }
     100% {
         transform: translateX(-100%); /* Move completely off-screen to the left */
+    }
+}
+@keyframes HoverMe {
+    0% {
+        opacity: 1;  /* Fully opaque */
+    }
+    50% {
+        opacity: 0;  /* Fully transparent */
+    }
+    100% {
+        opacity: 1;  /* Back to fully opaque */
     }
 }

@@ -1,3 +1,4 @@
+import Glass_effect from '../glasseffect/Glass'
 import './sec8.css'
 export default function Sec8({text ,cloud}) {
   return<>
@@ -51,6 +52,12 @@ export default function Sec8({text ,cloud}) {
 
             <img src="/monkey.png" className="w-[100vw]  "/>  
             </div>
+            
+  <div className='absolute z-40 top-[80%] left-[50vw]   '>
+
+  <Glass_effect/>  
+</div>
+            
     </div>
     
   
