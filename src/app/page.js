@@ -18,9 +18,11 @@ import Sec7 from "./component/sec7/sec7";
 import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef,useEffect } from 'react';
+import { useRef,useEffect ,useCallback, useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
+import Sec6 from "./sec6/sec6";
+import Sec8 from "./component/sec8/sec8";
 
 export default function Home() {
 
@@ -28,8 +30,21 @@ export default function Home() {
       const boxRef = useRef(null);
 
       const boxRef1 = useRef(null);
-            const ballref = useRef(null);
+       const ballref = useRef(null);
+      const cdRef = useRef(null);
+        const secRef6 = useRef(null);
+        const div1 = useRef(null);
 
+        const img1 = useRef(null);
+        const img2 = useRef(null);
+        const marq1 = useRef(null);
+        const marq2 = useRef(null);
+        const marq3 = useRef(null);
+
+        const text = useRef(null);
+        const cloud = useRef(null);
+
+        const Bot = useRef(null);
 
 
           useEffect(() => {
@@ -77,6 +92,206 @@ const animateball = gsap.to(ballref.current, {
       },
     });
      
+
+
+
+const pinsec6 = gsap.to(secRef6.current, {
+  scrollTrigger: {
+    scroller: "body",
+    trigger: secRef6.current,
+    pin: true,
+    start: '20% top', // Pin when the top of boxRef1 hits the top of the viewport
+    end: '+=1500', // Duration of the pin
+    markers: false,
+    onEnter: () => {
+      // Start animation on boxRef when boxRef1 is released
+      console.log("asad")
+      animatecd()
+      animatesdiv1()
+      animatesimg1()
+      animatesimg2()
+      marqu3()
+      marqu1()
+      marqu2()
+    // alert("asad")
+    },
+   
+  },
+});
+
+
+// Function to animate the first box
+const animatecd = () => {
+   gsap.to(cdRef.current, {
+    transform: "rotate(2000deg)",
+    duration: 1,
+    scrollTrigger: {
+      trigger: cdRef.current,
+      start: 'top 10%', // When the top of the box reaches the center of the viewport
+      end: '+=1500', // Duration of the animation
+      scrub: 1,
+      markers: false,
+    },
+  });  
+}
+
+const animatesimg1 = () => {
+  gsap.to(img1.current, {
+    transform: "translateY(-150%)",
+   duration: 1,
+   scrollTrigger: {
+     trigger: img1.current,
+     start: 'top 10%', // When the top of the box reaches the center of the viewport
+     end: '+=1200', // Duration of the animation
+     scrub: 2,
+     markers: false,
+   },
+ });  
+}
+
+
+const animatesimg2 = () => {
+gsap.to(img2.current, {
+  transform: "translateY(150%)",
+ duration: 1,
+ scrollTrigger: {
+   trigger: img2.current,
+   start: 'top 10%', // When the top of the box reaches the center of the viewport
+   end: '+=1200', // Duration of the animation
+   scrub: 2,
+   
+ },
+});  
+}
+const marqu1 = () => {
+gsap.to(marq1.current, {
+x:"-50%",
+duration: 10,
+scrollTrigger: {
+ trigger: marq1.current,
+ start: 'top 10%', // When the top of the box reaches the center of the viewport
+ end: '+=1500', // Duration of the animation
+ scrub: 2,
+ 
+},
+});  
+}
+
+const marqu2 = () => {
+gsap.to(marq2.current, {
+x:"-50%",
+duration: 10,
+scrollTrigger: {
+trigger: marq2.current,
+start: 'top 10%', // When the top of the box reaches the center of the viewport
+end: '+=1500', // Duration of the animation
+scrub: 2,
+
+},
+});  
+}
+
+
+
+const text1 = 
+  gsap.to(text.current, {
+  x:"-50%",
+  duration: 10,
+  scrollTrigger: {
+  trigger: text.current,
+  start: 'top 90%', // When the top of the box reaches the center of the viewport
+  end: 'top  ', // Duration of the animation
+  scrub: 2,
+  markers :false
+  
+  },
+  });  
+  const bot = 
+  gsap.to(Bot.current, {
+  x:"40%",
+  duration: 9,
+  
+  markers:true, 
+  scrollTrigger: {
+    trigger: Bot.current,
+   scroller:"body"
+    
+    },
+  });  
+
+  const CLoud = 
+  gsap.to(cloud.current, {
+  x:"-50%",
+  duration: 10,
+  scrollTrigger: {
+  trigger: cloud.current,
+  start: 'top 90%', // When the top of the box reaches the center of the viewport
+  end: 'top  ', // Duration of the animation
+  scrub: 2,
+  markers :false
+  
+  },
+  });
+
+  
+
+
+
+const marqu3 = () => {
+gsap.to(marq3.current, {
+x:"-50%",
+duration: 10,
+scrollTrigger: {
+trigger: marq3.current,
+start: 'top 10%', // When the top of the box reaches the center of the viewport
+end: '+=1500', // Duration of the animation
+scrub: 2,
+
+},
+});  
+}
+const animatesdiv1 = () => {
+gsap.to(div1.current, {
+width :"150%",
+ height :"200%",
+duration: 1,
+scrollTrigger: {
+ trigger: div1.current,
+ start: 'top 10%', // When the top of the box reaches the center of the viewport
+ end: '+=1500', // Duration of the animation
+ scrub: 2,
+ 
+},
+});  
+}
+const animateimg2 = 
+gsap.to(img1.current, {
+transform: "translateY(0%)",
+ duration: 1,
+ scrollTrigger: {
+   trigger: img1.current,
+   start: 'top 90%', // When the top of the box reaches the center of the viewport
+   end: 'top 50% ', // Duration of the animation
+   scrub: 2,
+   
+   markers: false,
+
+ },
+ 
+});  
+const animateimg1 = 
+gsap.to(img2.current, {
+transform: "translateY(0%)",
+ duration: 1,
+ scrollTrigger: {
+   trigger: img2.current,
+   start: 'top 90%', // When the top of the box reaches the center of the viewport
+   end: 'bottom 50% ', // Duration of the animation
+   scrub: 2,
+   markers: false,
+
+ },
+});
    
 
     return () => {
@@ -84,6 +299,11 @@ const animateball = gsap.to(ballref.current, {
       pinAnimation.kill();
     // animateBox.kill()
     animateball.kill()
+  pinsec6.kill();
+  text1.kill()
+  animateimg2.kill()
+    animateimg1.kill()
+    bot.kill()
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
@@ -92,45 +312,45 @@ const animateball = gsap.to(ballref.current, {
 
 
 
+
+
   return (
+    <>
     <div className="">
-      {/* <Sec1part1/> */}
-            {/* <Sec1/> */}
-      {/* <Sec2/> */}
-{/* <Sec1/> */}
-      {/* <div className="h-[65vw]">
+     
 
-<Sec1/>
-</div>
-
-      <div  className="h-[70vw] pb-16 ">
-
-<Sec2/>
-</div>      
-    <div ref={boxRef1} className=" ">
-
-<Sec3  boxRef={boxRef} />
-</div>
-<div className="h-[65vw] bg-black ">
-
-
-</div> */}
- <div  className="h-[65vw]">
-
-<Sec1 ballref={ballref} />
-</div>
+<div className="h-[65vw]"  >
+  <Sec1 ballref={ballref}/></div>
 
 <div className="bg h-[65vw]   ">
       <Sec2/>
 </div>
-<div ref={boxRef1}  className="h-[65vw]" >
+<div ref={boxRef1}  className="h-[62vw]" >
 <Sec3  boxRef={boxRef} />
 </div>
+<div className="  overflow-hidden bg-black  h-[65vw]" ref={secRef6}>
 
-    {/* <Sec5/> */}
-    {/* <Sec7/> */}
-      {/* <Disc4/> */}
+<Sec6 cdRef={cdRef} img1={img1} img2={img2} div1={div1} marq3={marq3} marq2={marq2} marq1={marq1}  />
+</div> 
+  
+<div className="h-[60vw] bg-[#a88add]">
+<Sec5/>
+</div>
 
-   </div>
+
+
+
+<div className="bg-black h-[52vw]" >
+  <Sec8 text={text} cloud={cloud} />
+  </div>
+  <div className="h-[60vw]">
+
+<Sec7 Bot={Bot}/>
+  </div>
+
+</div>
+
+
+</>
   );
 }

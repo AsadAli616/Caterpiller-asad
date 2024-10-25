@@ -1,0 +1,22 @@
+
+.text_1{
+    /* Adjust font size as needed */
+    color: transparent; /* Makes the text color transparent */
+    -webkit-text-stroke: 2px #a88add; /* Stroke width and color */
+    text-stroke: 2px #a88add
+}
+.text_2{
+    background: #a88add ;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+.img1{
+    transform: translateY(50%);
+}
+.img2{
+    transform: translateY(-50%);
+   
+}
+.divv{
+    transform: translateX(-50%);
+}

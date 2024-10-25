@@ -1,0 +1,8 @@
+.text_2{
+    background: #a88add ;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+.bot{
+    transform: translateX(-265%);
+}
