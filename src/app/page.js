@@ -23,6 +23,7 @@ import { useRef,useEffect ,useCallback, useState } from 'react';
 gsap.registerPlugin(ScrollTrigger);
 import Sec6 from "./sec6/sec6";
 import Sec8 from "./component/sec8/sec8";
+import LenisProvider from "./component/lenis/smooth";
 
 export default function Home() {
 
@@ -316,6 +317,7 @@ transform: "translateY(0%)",
 
   return (
     <>
+    <LenisProvider>
     <div className="">
      
 
@@ -350,7 +352,7 @@ transform: "translateY(0%)",
 
 </div>
 
-
+</LenisProvider>
 </>
   );
 }
