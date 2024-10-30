@@ -145,6 +145,6 @@ export default function Sec7({Bot}){
       
     </div>
     <div className="flex justify-center py-2 ">
-      <div className="bot " ref={Bot} ><img  src="/caterpiller.png"width={180}/></div> <div className="text_2 border-none border-none-black text-[5.6vw] leading-[8vw] mt-auto font-[800] tracking-tighter mb-4	">Keep smilin'!<img src="/bigheary.png"className="inline w-[5vw] mb-3 mx-1"/></div></div>
+      <div className="bot " ref={Bot} ><img  src="/caterpiller.png"width={180}/></div> <div className="text_2 border-none border-none-black text-[5.6vw] leading-[8vw] mt-auto font-[800] tracking-tighter mb-4	">Keep smilin &apos; !<img src="/bigheary.png"className="inline w-[5vw] mb-3 mx-1"/></div></div>
     </>
 }
