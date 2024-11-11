@@ -1,24 +1,48 @@
 
 "use client";
-import { useState } from 'react';
+import { useEffect, useState ,useRef } from 'react';
 
 import './playlist.css'
 
 export default function Playpaue(){
+  const audioRef = useRef();
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(()=>{
+    audioRef.current= new Audio('/Bonita - Glory 320 Kbps.mp3')
+
+  },[])
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
     const [play ,setplay] =useState(false)
 return<>
 <div className="border h-[35px] w-[220px] overflow-hidden  rounded-[30px] flex mx-auto ">
 <div 
-onClick={()=>{play==false?setplay(true):setplay(false)}}
+onClick={()=>{
+  togglePlay()
+  if(play==false){setplay(true)}
+   else{setplay(false)}}}
 className='w-1/4 flex py-3 justify-center bg-[#a083d7]  relative p-2   items-center '>
   <button>
 <h1 className='rotate-90 text-white  text-[14px]'>
 
-    ON
+{ play==true ?   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+    <path d="M6 6h4v12H6zm8 0h4v12h-4z"/>
+  </svg> :  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+    <path d="M8 5v14l11-7z"/>
+  </svg> }
 </h1>
     </button>  
 </div>
-<div className='moon w-3/4   border relative  rounded-[30px]   border-white overflow-hidden '>
+<div className='moon w-3/4    relative  rounded-[30px]   border-white overflow-hidden '>
 
 <svg id="" className=" absolute"     fill="transparent"
  viewBox="0 0 250 10" width={200} height={25}>

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import {marquee} from 'react'
 import Sec1part1 from '../sec1part1/h1';
 import Nav from '../nav/nav';
+import Playpaue from '../Playpause/Playpause';
 
 export default function Sec1({ballref})  {
 
@@ -27,6 +28,10 @@ export default function Sec1({ballref})  {
 </div>
 <div  ref={ballref}  className='w-[4.5vw] top-[39vw] left-[32vw] absolute h-[15vw]    z-[6]'>
     <img  src='/ball.png' className='absolute  ' />
+   
+</div>
+<div    className='w-[100vw] top-[20vw] rotate-[-90deg] left-[-30vw] absolute h-[15vw]    z-[6]'>
+    <Playpaue/>
    
 </div>
 <div className='w-[100%] top-[35.8vw] absolute z-[5]'>
