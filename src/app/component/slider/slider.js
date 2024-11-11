@@ -15,11 +15,20 @@ const contentStyle = {
 };
 
 const Slider = () => {
-  
+
   const [animation , setanimation ] = useState("0")
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef(new Audio('/chill-lofi-music-interior-lounge-256260.mp3'));
- 
+  const audioRef = useRef();
+  const audioRef1 = useRef();
+  const audioRef2 = useRef();
+  const audioRef3 = useRef();
+
+  useEffect(()=>{
+     audioRef.current= new Audio('/chill-lofi-music-interior-lounge-256260.mp3')
+     audioRef2.current =new Audio('/please-calm-my-mind-125566.mp3')
+     audioRef1.current=new Audio('/piano-calm-inspiring-255443.mp3')
+     audioRef3.current=new Audio('/chill-lofi-music-interior-lounge-256260.mp3')
+   },[])
 
  
   const togglePlay = () => {
@@ -49,7 +58,6 @@ const Slider = () => {
 
 
   const [isPlaying1, setIsPlaying1] = useState(false);
-  const audioRef1 = useRef(new Audio('/piano-calm-inspiring-255443.mp3'));
  
 
  
@@ -73,7 +81,6 @@ const Slider = () => {
   };
   
   const [isPlaying2, setIsPlaying2] = useState(false);
-  const audioRef2 = useRef(new Audio('/please-calm-my-mind-125566.mp3'));
  
 
  
@@ -98,7 +105,6 @@ const Slider = () => {
 
 
   const [isPlaying3, setIsPlaying3] = useState(false);
-  const audioRef3 = useRef(new Audio('/chill-lofi-music-interior-lounge-256260.mp3'));
  
 
  
