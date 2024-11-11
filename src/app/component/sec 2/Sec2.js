@@ -20,7 +20,7 @@ export default function Sec2(){
   }
 
   return<>
-  <div className="  h-fit ">
+  <div className="  h-fit overflow-hidden ">
 
   
   <div className="  flex  absolute flex-col w-[100vw] " >

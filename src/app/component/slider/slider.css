@@ -1,0 +1,19 @@
+@keyframes Animation_of_text {
+    0%{    transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0px);
+       
+    }
+    
+}
+
+.text_Animate{
+    animation: Animation_of_text .5s  linear ; /* Adjust duration as needed */
+    
+
+}
+.text_Animate1{
+    transform: translateX(-300px);
+
+}

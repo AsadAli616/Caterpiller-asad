@@ -6,3 +6,8 @@
 .bot{
     transform: translateX(-265%);
 }
+@media screen and (max-width: 480px) {
+    .bot{
+        transform: translateX(-100%);
+    }
+  }

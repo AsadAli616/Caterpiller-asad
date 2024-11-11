@@ -14,7 +14,7 @@ import Disc4 from "./component/disc4/disc4";
 import Sec3 from "./component/sec3/sec3";
 import Sec5 from "./component/sec5/sec5";
 import Sec7 from "./component/sec7/sec7";
-
+import useResponsive_layout from '@/app/component/responsive_layout/responsive'
 import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -24,14 +24,20 @@ gsap.registerPlugin(ScrollTrigger);
 import Sec6 from "./sec6/sec6";
 import Sec8 from "./component/sec8/sec8";
 import LenisProvider from "./component/lenis/smooth";
+import Sec1xms from "./component/sec1xsm/secXms";
+import Slider from "./component/slider/slider";
+import Sec2Xms from "./sec2Xsm/sec2Xms";
+import Sec4Xms from "./component/Sec4Xms/Sec4Xms";
 
 export default function Home() {
-
+const {winDowWidth} = useResponsive_layout()
 
       const boxRef = useRef(null);
 
       const boxRef1 = useRef(null);
        const ballref = useRef(null);
+       const ballref1 = useRef(null);
+
       const cdRef = useRef(null);
         const secRef6 = useRef(null);
         const div1 = useRef(null);
@@ -49,7 +55,141 @@ export default function Home() {
 
 
           useEffect(() => {
-    const pinAnimation = gsap.to(boxRef1.current, {
+            var animateballXms ;
+            var animateball;
+            var pinsec6Xms;
+            var pinAnimationXms;
+            var pinAnimation;
+            var text1;
+            var pinsec6;
+            var CLoud;
+            var animateimg1;
+            var animateimg2;
+            if(winDowWidth <=425){
+               pinAnimationXms = gsap.to(boxRef1.current, {
+                scrollTrigger: {
+                  scroller: "body",
+                  trigger: boxRef1.current,
+                  pin: true,
+                  start: 'top top', // Pin when the top of boxRef1 hits the top of the viewport
+                  end: '+=800', // Duration of the pin
+                  markers: false,
+                  onEnter: () => {
+                    // Start animation on boxRef when boxRef1 is released
+                    
+                    animateBoxXms()
+                   
+                  // alert("asad")
+                  },
+                },
+              });
+              const animateBoxXms = () => {
+                gsap.to(boxRef.current, {
+                 x: "-75%",
+                 duration: 10,
+                 scrollTrigger: {
+                   trigger: boxRef.current,
+                   start: 'top top', // When the top of the box reaches the center of the viewport
+                   end: 'bottom top', // Duration of the animation
+                   scrub: 2,
+                   markers: false,
+                 },
+               });  
+             }
+            animateballXms = gsap.to(ballref.current, {
+              y: "30vh",
+               // Increased duration for slower animation
+              scrollTrigger: {
+                trigger: ballref.current,
+                start: 'top center', // When the top of the box reaches the center of the viewport
+                end: 'bottom', // Duration of the animation
+                scrub: 2, // Increased scrub value for smoother scrolling effect
+                markers: true,
+              },
+            });
+          pinsec6Xms = gsap.to(secRef6.current, {
+              scrollTrigger: {
+                scroller: "body",
+                trigger: secRef6.current,
+                pin: true,
+                start: 'top top', // Pin when the top of boxRef1 hits the top of the viewport
+                end: '+=1000', // Duration of the pin
+                markers: false,
+                onEnter: () => {
+                  // Start animation on boxRef when boxRef1 is released
+                  animatesimg1Xms()
+        
+                  animatecdXms()
+                  animatesdiv1Xms()
+                  
+                // alert("asad")
+                },
+               
+              },
+            });
+            const animatecdXms = () => {
+              gsap.to(cdRef.current, {
+               transform: "rotate(2000deg)",
+               scrollTrigger: {
+                 trigger: cdRef.current,
+                 start: 'top 10%', // When the top of the box reaches the center of the viewport
+                 end: '+=1500', // Duration of the animation
+                 scrub: 1,
+                 markers: false,
+               },
+             });  
+            }
+            
+            const animatesimg1Xms = () => {
+              gsap.to(img1.current, {
+                top : "-100%",
+               
+               scrollTrigger: {
+                 trigger: img1.current,
+                 start: 'top 100%', // When the top of the box reaches the center of the viewport
+                 end: '+=1000', // Duration of the animation
+                 scrub: 2,
+                 markers: true,
+               },
+             });  
+            }
+          
+            const animatesdiv1Xms = () => {
+              gsap.to(div1.current, {
+             width :"300%",
+              height :"150%",
+                // transform: "scale(6.6)",
+              duration: 10,
+              scrollTrigger: {
+               trigger: div1.current,
+               start: 'top top', // When the top of the box reaches the center of the viewport
+               end: '+=1500', // Duration of the animation
+               scrub: 2,
+               
+              },
+              });  
+              }
+            
+        
+            
+            }
+            else{
+
+
+              const animateBox = () => {
+                gsap.to(boxRef.current, {
+                 x: "-50%",
+                 duration: 10,
+                 scrollTrigger: {
+                   trigger: boxRef.current,
+                   start: 'top top', // When the top of the box reaches the center of the viewport
+                   end: 'bottom top', // Duration of the animation
+                   scrub: 2,
+                   markers: false,
+                 },
+               });  
+             }
+   pinAnimation = gsap.to(boxRef1.current, {
       scrollTrigger: {
         scroller: "body",
         trigger: boxRef1.current,
@@ -67,21 +207,11 @@ export default function Home() {
       },
     });
 
-    // Function to animate the first box
-    const animateBox = () => {
-       gsap.to(boxRef.current, {
-        x: "-50%",
-        duration: 10,
-        scrollTrigger: {
-          trigger: boxRef.current,
-          start: 'top top', // When the top of the box reaches the center of the viewport
-          end: 'bottom top', // Duration of the animation
-          scrub: 2,
-          markers: false,
-        },
-      });  
-    }
-const animateball = gsap.to(ballref.current, {
+  
+   
+    
+    
+ animateball = gsap.to(ballref.current, {
       y: "20vw",
       duration: 1, // Increased duration for slower animation
       scrollTrigger: {
@@ -92,11 +222,9 @@ const animateball = gsap.to(ballref.current, {
         markers: false,
       },
     });
-     
+   
 
-
-
-const pinsec6 = gsap.to(secRef6.current, {
+ pinsec6 = gsap.to(secRef6.current, {
   scrollTrigger: {
     scroller: "body",
     trigger: secRef6.current,
@@ -121,7 +249,6 @@ const pinsec6 = gsap.to(secRef6.current, {
 });
 
 
-// Function to animate the first box
 const animatecd = () => {
    gsap.to(cdRef.current, {
     transform: "rotate(2000deg)",
@@ -194,7 +321,7 @@ scrub: 2,
 
 
 
-const text1 = 
+ text1 = 
   gsap.to(text.current, {
   x:"-50%",
   duration: 10,
@@ -206,21 +333,10 @@ const text1 =
   markers :false
   
   },
-  });  
-  const bot = 
-  gsap.to(Bot.current, {
-  x:"40%",
-  duration: 9,
+  });
+      
   
-  markers:true, 
-  scrollTrigger: {
-    trigger: Bot.current,
-   scroller:"body"
-    
-    },
-  });  
-
-  const CLoud = 
+  CLoud = 
   gsap.to(cloud.current, {
   x:"-50%",
   duration: 10,
@@ -265,7 +381,7 @@ scrollTrigger: {
 },
 });  
 }
-const animateimg2 = 
+ animateimg2 = 
 gsap.to(img1.current, {
 transform: "translateY(0%)",
  duration: 1,
@@ -280,7 +396,7 @@ transform: "translateY(0%)",
  },
  
 });  
-const animateimg1 = 
+ animateimg1 = 
 gsap.to(img2.current, {
 transform: "translateY(0%)",
  duration: 1,
@@ -292,22 +408,97 @@ transform: "translateY(0%)",
    markers: false,
 
  },
-});
-   
+});   
+}
+  const bot = 
+  gsap.to(Bot.current, {
+  x:"40%",
+  duration: 9,
+  
+  markers:true, 
+  scrollTrigger: {
+    trigger: Bot.current,
+   scroller:"body"
+    
+    },
+  });  
+
+ 
+
+
+
+
+// const animateBoxXms = () => {
+//   gsap.to(boxRef.current, {
+//    x: "-75%",
+//    scrollTrigger: {
+//      trigger: boxRef.current,
+//      start: 'top top', // When the top of the box reaches the center of the viewport
+//      end: 'bottom top', // Duration of the animation
+//      scrub: 2,
+//      markers: false,
+//    },
+//  });  
+// }
+
+
+
+
+
+
+
+
+// const pinAnimationXms = gsap.to(boxRef1.current, {
+//   scrollTrigger: {
+//     scroller: "body",
+//     trigger: boxRef1.current,
+//     pin: true,
+//     start: 'top top', // Pin when the top of boxRef1 hits the top of the viewport
+//     end: '+=1000', // Duration of the pin
+//     markers: false,
+//     onEnter: () => {
+//       // Start animation on boxRef when boxRef1 is released
+      
+//       animateBoxXms()
+     
+//     // alert("asad")
+//     },
+//   },
+// });
+
+
+
+
+
 
     return () => {
-      // Clean up ScrollTrigger on component unmount
-      pinAnimation.kill();
-    // animateBox.kill()
-    animateball.kill()
-  pinsec6.kill();
-  text1.kill()
-  animateimg2.kill()
-    animateimg1.kill()
-    bot.kill()
+      if(winDowWidth<=425){
+        animateballXms.kill()  
+        pinsec6Xms.kill();  
+        bot.kill()
+        pinAnimationXms.kill();
+
+      }
+      else{
+    // pinAnimation.kill()
+    // animateball.kill()
+    // text1.kill()
+    // pinsec6.kill()
+    // animateimg2.kill()
+    // animateimg1.kill()
+    // CLoud.kill()
+    // bot.kill()
+
+    
+
+      }
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      
+    
+ 
+  
     };
-  }, []);
+  }, [winDowWidth]);
 
 
 
@@ -317,23 +508,51 @@ transform: "translateY(0%)",
 
   return (
     <>
-    <LenisProvider>
-    <div className="">
+    <div>
+    <div className={winDowWidth<=425?"":"hidden"} >
+
+
+<div className="h-fit w-[100vw] bg-black"><Sec1xms ballref={ballref}/></div>
+
+<div className="h-fit w-[100vw] "><Sec2Xms/></div>
+<div ref={boxRef1} className=" w-[100vw]"><Sec3 boxRef={boxRef}/></div>
+
+<div className="   bg-black  h-[100vh] w-[100vw] overflow-hidden" ref={secRef6}>
+<Sec4Xms cdRef={cdRef}  img1={img1} div1={div1} marq3={marq3} marq2={marq2} marq1={marq1} />
+</div> 
+<div className="h-fit bg-[#a88add] py-8">
+<Sec5/>
+</div>
+<div className=" border bg-black border-black overflow-hidden h-fit ">
+<Sec8/>
+</div>
+<Sec7 Bot={Bot}/>
+    </div>
+    
+ 
+  {/* <div className={winDowWidth>=426?"":"hidden"}> */}
+
+
+   {/* <LenisProvider>
      
 
-<div className="h-[65vw]"  >
+<div className="xsm:h-[65vw]"  >
   <Sec1 ballref={ballref}/></div>
 
 <div className="bg h-[65vw]   ">
       <Sec2/>
 </div>
-<div ref={boxRef1}  className="h-[62vw]" >
+
+<div ref={boxRef1}  className="h-[100vh]" >
 <Sec3  boxRef={boxRef} />
 </div>
-<div className="  overflow-hidden bg-black  h-[65vw]" ref={secRef6}>
+
+  <div className="   bg-black  " ref={secRef6}>
 
 <Sec6 cdRef={cdRef} img1={img1} img2={img2} div1={div1} marq3={marq3} marq2={marq2} marq1={marq1}  />
 </div> 
+
+
   
 <div className="h-[60vw] bg-[#a88add]">
 <Sec5/>
@@ -350,9 +569,15 @@ transform: "translateY(0%)",
 <Sec7 Bot={Bot}/>
   </div>
 
-</div>
 
-</LenisProvider>
+
+</LenisProvider> */}
+  {/* </div> */}
+  </div>
+ 
+ 
+
 </>
   );
 }
+// 

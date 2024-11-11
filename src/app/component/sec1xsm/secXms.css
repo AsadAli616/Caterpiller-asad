@@ -1,0 +1,25 @@
+.bg_div{
+    background-image: url(/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .art_work{
+    background-image: url(/artwork.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -100vw 0vw;
+} */
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } 
+   .marquee-text {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 10s linear infinite;
+    }
