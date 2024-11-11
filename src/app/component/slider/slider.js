@@ -27,7 +27,7 @@ const Slider = () => {
      audioRef.current= new Audio('/chill-lofi-music-interior-lounge-256260.mp3')
      audioRef2.current =new Audio('/please-calm-my-mind-125566.mp3')
      audioRef1.current=new Audio('/piano-calm-inspiring-255443.mp3')
-     audioRef3.current=new Audio('/chill-lofi-music-interior-lounge-256260.mp3')
+     audioRef3.current=new Audio('/Move - Mr.Nair 320 Kbps.mp3')
    },[])
 
  
