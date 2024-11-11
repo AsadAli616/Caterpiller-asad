@@ -10,6 +10,13 @@ module.exports = {
       blur: {
         xs: '2px',
       },
+      screens: {
+        'xl': '1200px',
+        '2xms': '425px',
+        '3xms': '375px',
+
+        'xsm': '320px', // Define the size you want for xsm
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

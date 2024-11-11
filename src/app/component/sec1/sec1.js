@@ -61,6 +61,7 @@ export default function Sec1({ballref})  {
    <div className='z-[6] top-[45vw] absolute  left-0 right-0   flex items-end '>
     <Sec1part1/>
 </div>
+
    </div>
   
             </>

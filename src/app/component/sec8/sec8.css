@@ -4,3 +4,22 @@
 .divvv{
     transform: translateX(-50%);
 } */
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } 
+   .marquee-text1 {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 50s linear infinite;
+    }
+    
+   .marquee-text {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
