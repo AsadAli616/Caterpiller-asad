@@ -11,8 +11,8 @@ export default function Sec8({text ,cloud}) {
     <div className= ' overflow-x-hidden absolute md:mt-[9.5vw] xsm:mt-[20.5vw] z-20'>
 
     
-    {/* <marquee   scrollamount="9" loop="infinite">   */}
-        <div ref={text}  className='marquee-text1 text-[#dae7b4] flex gap-[10vw]  font-syntheses leading-[7vw] tracking-tighter text-[5.5vw] font-[900]  '>
+    <marquee   scrollamount="9" loop="infinite">  
+        <div ref={text}  className=' text-[#dae7b4] flex gap-[10vw]  font-syntheses leading-[7vw] tracking-tighter text-[5.5vw] font-[900]  '>
     <h1 className="">Join the Chill Crew</h1>
     <h1 className="">Join the Chill Crew</h1>
     <h1 className="">Join the Chill Crew</h1>
@@ -32,18 +32,18 @@ export default function Sec8({text ,cloud}) {
     <h1 className="">Join the Chill Crew</h1>
     <h1 className="">Join the Chill Crew</h1>
     </div>
-            {/* </marquee> */}
+            </marquee>
     </div>
     <div className='absolute  overflow-x-hidden mt-[9.5vw] z-10'>
 
     
-{/* <marquee   scrollamount="3" loop="infinite">   */}
-    <div ref={cloud}  className='marquee-text w-[100vw] flex gap-[100vw] font-syntheses leading-[7vw] tracking-tighter text-[5.5vw] font-[900]  '>
+<marquee   scrollamount="3" loop="infinite">  
+    <div ref={cloud}  className=' w-[100vw] flex gap-[100vw] font-syntheses leading-[7vw] tracking-tighter text-[5.5vw] font-[900]  '>
 <img src='/CLOUDS2.png' width={800} />
 <img src='/CLOUDS2.png' width={800} />
 
 </div>
-        {/* </marquee> */}
+        </marquee>
 </div>
 
     

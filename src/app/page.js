@@ -42,6 +42,28 @@ const {winDowWidth} = useResponsive_layout()
         const secRef6 = useRef(null);
         const div1 = useRef(null);
 
+
+
+
+
+
+        const cdRefXms = useRef(null);
+        const secRef6Xms = useRef(null);
+        const div1Xms = useRef(null);
+        const img1Xms = useRef(null);
+
+
+
+
+
+
+
+
+
+
+
+
+
         const img1 = useRef(null);
         const img2 = useRef(null);
         const marq1 = useRef(null);
@@ -52,7 +74,7 @@ const {winDowWidth} = useResponsive_layout()
         const cloud = useRef(null);
 
         const Bot = useRef(null);
-
+        
 
           useEffect(() => {
             var animateballXms ;
@@ -104,13 +126,13 @@ const {winDowWidth} = useResponsive_layout()
                 start: 'top center', // When the top of the box reaches the center of the viewport
                 end: 'bottom', // Duration of the animation
                 scrub: 2, // Increased scrub value for smoother scrolling effect
-                markers: true,
+                markers: false,
               },
             });
-          pinsec6Xms = gsap.to(secRef6.current, {
+          pinsec6Xms = gsap.to(secRef6Xms.current, {
               scrollTrigger: {
                 scroller: "body",
-                trigger: secRef6.current,
+                trigger: secRef6Xms.current,
                 pin: true,
                 start: 'top top', // Pin when the top of boxRef1 hits the top of the viewport
                 end: '+=1000', // Duration of the pin
@@ -128,10 +150,10 @@ const {winDowWidth} = useResponsive_layout()
               },
             });
             const animatecdXms = () => {
-              gsap.to(cdRef.current, {
+              gsap.to(cdRefXms.current, {
                transform: "rotate(2000deg)",
                scrollTrigger: {
-                 trigger: cdRef.current,
+                 trigger: cdRefXms.current,
                  start: 'top 10%', // When the top of the box reaches the center of the viewport
                  end: '+=1500', // Duration of the animation
                  scrub: 1,
@@ -141,27 +163,27 @@ const {winDowWidth} = useResponsive_layout()
             }
             
             const animatesimg1Xms = () => {
-              gsap.to(img1.current, {
+              gsap.to(img1Xms.current, {
                 top : "-100%",
                
                scrollTrigger: {
-                 trigger: img1.current,
+                 trigger: img1Xms.current,
                  start: 'top 100%', // When the top of the box reaches the center of the viewport
                  end: '+=1000', // Duration of the animation
                  scrub: 2,
-                 markers: true,
+                 markers: false,
                },
              });  
             }
           
             const animatesdiv1Xms = () => {
-              gsap.to(div1.current, {
+              gsap.to(div1Xms.current, {
              width :"300%",
               height :"150%",
                 // transform: "scale(6.6)",
               duration: 10,
               scrollTrigger: {
-               trigger: div1.current,
+               trigger: div1Xms.current,
                start: 'top top', // When the top of the box reaches the center of the viewport
                end: '+=1500', // Duration of the animation
                scrub: 2,
@@ -474,20 +496,19 @@ transform: "translateY(0%)",
     return () => {
       if(winDowWidth<=425){
         animateballXms.kill()  
-        pinsec6Xms.kill();  
         bot.kill()
         pinAnimationXms.kill();
 
       }
       else{
-    // pinAnimation.kill()
-    // animateball.kill()
-    // text1.kill()
-    // pinsec6.kill()
-    // animateimg2.kill()
-    // animateimg1.kill()
-    // CLoud.kill()
-    // bot.kill()
+    pinAnimation.kill()
+    animateball.kill()
+    text1.kill()
+    pinsec6.kill()
+    animateimg2.kill()
+    animateimg1.kill()
+    CLoud.kill()
+    bot.kill()
 
     
 
@@ -517,8 +538,8 @@ transform: "translateY(0%)",
 <div className="h-fit w-[100vw] "><Sec2Xms/></div>
 <div ref={boxRef1} className=" w-[100vw]"><Sec3 boxRef={boxRef}/></div>
 
-<div className="   bg-black  h-[100vh] w-[100vw] overflow-hidden" ref={secRef6}>
-<Sec4Xms cdRef={cdRef}  img1={img1} div1={div1} marq3={marq3} marq2={marq2} marq1={marq1} />
+<div className="   bg-black  h-[100vh] w-[100vw] overflow-hidden" ref={secRef6Xms}>
+<Sec4Xms cdRef={cdRefXms}  img1={img1Xms} div1={div1Xms}  />
 </div> 
 <div className="h-fit bg-[#a88add] py-8">
 <Sec5/>
@@ -530,52 +551,52 @@ transform: "translateY(0%)",
     </div>
     
  
-  {/* <div className={winDowWidth>=426?"":"hidden"}> */}
 
 
-   {/* <LenisProvider>
-     
+    {winDowWidth >= 426 && (
+        <LenisProvider>
+          <div className="xsm:h-[65vw]">
+            <Sec1 ballref={ballref} />
+          </div>
 
-<div className="xsm:h-[65vw]"  >
-  <Sec1 ballref={ballref}/></div>
+          <div className="bg h-[65vw]">
+            <Sec2 />
+          </div>
 
-<div className="bg h-[65vw]   ">
-      <Sec2/>
-</div>
+          <div ref={boxRef1} className="h-[100vh]">
+            <Sec3 boxRef={boxRef} />
+          </div>
 
-<div ref={boxRef1}  className="h-[100vh]" >
-<Sec3  boxRef={boxRef} />
-</div>
+          <div className="bg-black overflow-hidden" ref={secRef6} >
+            <Sec6
+              cdRef={cdRef}
+              img1={img1}
+              img2={img2}
+              div1={div1}
+              marq3={marq3}
+              marq2={marq2}
+              marq1={marq1}
+            />
+          </div>
 
-  <div className="   bg-black  " ref={secRef6}>
+          <div className="h-[60vw] bg-[#a88add]">
+            <Sec5 />
+          </div>
 
-<Sec6 cdRef={cdRef} img1={img1} img2={img2} div1={div1} marq3={marq3} marq2={marq2} marq1={marq1}  />
-</div> 
+          <div className="bg-black h-[52vw]">
+            <Sec8 text={text} cloud={cloud} />
+          </div>
 
-
+          <div className="h-[60vw]">
+            <Sec7 Bot={Bot} />
+          </div>
+        </LenisProvider>
+      )}
   
-<div className="h-[60vw] bg-[#a88add]">
-<Sec5/>
-</div>
 
-
-
-
-<div className="bg-black h-[52vw]" >
-  <Sec8 text={text} cloud={cloud} />
-  </div>
-  <div className="h-[60vw]">
-
-<Sec7 Bot={Bot}/>
-  </div>
-
-
-
-</LenisProvider> */}
-  {/* </div> */}
   </div>
  
- 
+
 
 </>
   );

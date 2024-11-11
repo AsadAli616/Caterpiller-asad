@@ -4,7 +4,9 @@ export default function useResponsive_layout(){
 const [winDowWidth ,setwinDowWidth] = useState(0)
 useEffect(()=>{
 const handler=()=>{
-    setwinDowWidth(window.innerWidth)}
+    setwinDowWidth(window.innerWidth)
+    // window.location.reload()} 
+}
     
     setwinDowWidth(window.innerWidth)
     window.addEventListener("resize",handler)

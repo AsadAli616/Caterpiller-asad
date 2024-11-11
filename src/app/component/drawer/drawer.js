@@ -34,10 +34,14 @@ const Drawer1 = () => {
   
   return (
     <>
-    <button className='border border-white flex px-1 rounded-full  py-1 justify-center items-center' onClick={showDrawer}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 20 20" fill="none">
-  <path fill="#ffff" fill-rule="evenodd" d="M18 5a1 1 0 100-2H2a1 1 0 000 2h16zm0 4a1 1 0 100-2h-8a1 1 0 100 2h8zm1 3a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 5a1 1 0 100-2h-8a1 1 0 100 2h8z"/>
+    <button className='flex px-1 rounded-full  py-1 justify-center items-center' onClick={showDrawer}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify">
+  <line x1="21" y1="10" x2="3" y2="10"/>
+  <line x1="21" y1="6" x2="3" y2="6"/>
+  <line x1="21" y1="14" x2="3" y2="14"/>
+  <line x1="21" y1="18" x2="3" y2="18"/>
 </svg>
+
     </button>
       <Drawer  title=""  style={contentStyle}  onClose={onClose} open={open}>
 

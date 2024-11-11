@@ -4,7 +4,7 @@ import './disc3.css'
 import { useState } from "react"
 import useResponsive_layout from '../responsive_layout/responsive'
 
-export default function Disc3({updateTrans ,trans ,hOver,isPlaying2}){
+export default function Disc3({updateTrans ,trans ,hOver,isPlaying2 ,updateLeave}){
     const [rotate ,setrotate] = useState(false)
     const {winDowWidth} = useResponsive_layout()
 
@@ -16,9 +16,8 @@ export default function Disc3({updateTrans ,trans ,hOver,isPlaying2}){
     
     <div onMouseEnter={()=>{
       hOver("fourth")
-      updateTrans("enter3")}} onMouseLeave={()=>{updateTrans("leave3")  
-     if(trans=="leave3"){
-      setTimeout(()=>{settrans("")},"800")    }}} className={winDowWidth >= 426 ?"div11 relative xsm:w-[50vw] md:w-[18vw] md:h-[15vw] xsm:h-[50vw] ": "div11 hidden   relative xsm:w-[50vw] md:w-[18vw] md:h-[15vw] xsm:h-[50vw] "}>
+      updateTrans("enter3")
+      updateLeave("leave1")}}  className={winDowWidth >= 426 ?"div11 relative xsm:w-[50vw] md:w-[18vw] md:h-[15vw] xsm:h-[50vw] ": "div11 hidden   relative xsm:w-[50vw] md:w-[18vw] md:h-[15vw] xsm:h-[50vw] "}>
         <img className="imG2 absolute z-10" src="/Layer 17.png"/>
         <img className="imG absolute border  md:left-[6.7vw] xsm:left-[22vw] rounded-[100%] border-black " src="/vinyl_.png"/>
     </div>
