@@ -1,7 +1,7 @@
 
 "use client";
 
-import data from '../../arry.json'
+import data from '../../Arry.json'
 import bg from '../../bg.json'
 
 import Drawer1 from '../../component/drawer/drawer';
