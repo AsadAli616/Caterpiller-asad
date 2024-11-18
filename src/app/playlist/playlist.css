@@ -1,0 +1,14 @@
+.PLaylist_main_div{
+    background-image: url('/Playlist_bg.png');
+    background-position: -10vw -20vw ;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 480px) {
+    .PLaylist_main_div{
+        background-image: url('/Playlist_bg.png');
+        
+        background-repeat: no-repeat;
+    }
+  }

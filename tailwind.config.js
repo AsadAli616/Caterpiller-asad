@@ -17,6 +17,9 @@ module.exports = {
 
         'xsm': '320px', // Define the size you want for xsm
       },
+      boxShadow: {
+        'custom-purple': '0px 0px 8px 0.5px #7c52dc',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

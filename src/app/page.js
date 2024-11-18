@@ -596,8 +596,6 @@ transform: "translateY(0%)",
 
   </div>
  
-
-
 </>
   );
 }

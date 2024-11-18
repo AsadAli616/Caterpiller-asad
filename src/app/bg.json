@@ -1,0 +1,10 @@
+[
+    { "id": "1", "img": "/Background1.png" },
+    { "id": "2", "img": "/Background2.png" },
+    { "id": "3", "img": "/Background3.png" },
+    { "id": "4", "img": "/Background4.png" },
+    { "id": "5", "img": "/Background5.png" },
+    { "id": "6", "img": "/Background6.png" },
+    { "id": "7", "img": "/Background7.png" },
+    { "id": "8", "img": "/Background8.png" }
+]
