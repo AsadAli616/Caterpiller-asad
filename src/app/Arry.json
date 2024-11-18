@@ -1,0 +1,10 @@
+[
+    { "id": "1", "img": "/Play_list_img1.png","audio":"/chill-lofi-music-interior-lounge-256260.mp3" },
+    { "id": "2", "img": "/Play_list_img2.png", "audio":"/chill-lofi-music-interior-lounge-256260.mp3"  },
+    { "id": "3", "img": "/Play_list_img3.png" , "audio":"/chill-lofi-music-interior-lounge-256260.mp3" },
+    { "id": "4", "img": "/Play_list_img4.png" , "audio":"/chill-lofi-music-interior-lounge-256260.mp3"  },
+    { "id": "5", "img": "/Play_list_img5.png" , "audio":"/chill-lofi-music-interior-lounge-256260.mp3" },
+    { "id": "6", "img": "/Play_list_img6.png" , "audio":"/chill-lofi-music-interior-lounge-256260.mp3" },
+    { "id": "7", "img": "/Play_list_img7.png" , "audio":"/chill-lofi-music-interior-lounge-256260.mp3"  },
+    { "id": "8", "img": "/Play_list_img8.png" , "audio":"/chill-lofi-music-interior-lounge-256260.mp3" }
+]

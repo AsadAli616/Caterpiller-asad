@@ -1,0 +1,8 @@
+/* *{
+    background-color: #fffff5;
+    text-decoration-color: black;
+} */
+.upo{
+    background: rgb(70,59,91);
+background: linear-gradient(180deg, rgba(70,59,91,1) 0%, rgba(211,190,245,1) 100%);
+}
