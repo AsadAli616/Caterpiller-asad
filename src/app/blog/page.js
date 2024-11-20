@@ -62,7 +62,7 @@ export default function Blog(){
 
 
    <div className="upo border-none border-none-black my-8   items-center flex flex-col justify-center  w-[100vw] md:w-[90vw] mx-auto py-10 rounded-[20px] md:h-[50vh] ">
-   <div className="border-none border-none-black rounded-[20px] bg-transparent text-white  text-center text-[4vw] tracking-tighter     font-[900] leading-[4vw]">DONO&apos; T MISS ANY News!</div>
+   <div className="border-none border-none-black rounded-[20px] bg-transparent text-white  text-center text-[4vw] tracking-tighter     font-[900] leading-[4vw]">DONO &apos; T MISS ANY News!</div>
    <div className=" mx-auto w-[80%] md:w-[60vw] px-4 py-4 rounded-[10px]  border-none bg-white bg-opacity-50  border-none-black">
       <div className="rounded-[10px] bg-transparent ">
                   <input type="text" className="border-none border-none-black w-[70%] bg-transparent p-4  md:py-2"/> 
