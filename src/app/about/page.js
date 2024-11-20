@@ -114,7 +114,7 @@ const [isPlaying, setIsPlaying] = useState(false);
     return<>
    
 
-   <div ref={Dive}  className="  ">
+   <div ref={Dive}  className=" lg:block xsm:hidden ">
 
 
    <div className="border-none  nav flex absolute z-10 left-0 right-0  border-none-black w-[90vw] mx-auto p-2 justify-between ">
