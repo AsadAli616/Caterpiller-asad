@@ -51,7 +51,7 @@ console.log(FilTerData)
         <div style={contentStyle} className='absolute h-[100vh] md:w-[100%] w-[100vw]  md:h-[140vh] z-[2]' ></div>
         <div className=' rounded-[20px] overflow-hidden border-black w-[80vw] md:w-[25%] relative flex flex-col z-[5]'>
     
-        <div style={contentStyle} onClick={()=>{togglePlay2()}} className='absolute text-white z-[4] border border-rounded top-[10vw]   h-[80px] left-[10vw] right-0 rounded-full w-[80px] items-center flex justify-center'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <div style={contentStyle} onClick={()=>{togglePlay2()}} className='absolute text-white z-[4] border border-rounded lg:top-[10vw] top-[30vw] left-[30vw]   h-[80px] lg:left-[10vw] right-0 rounded-full w-[80px] items-center flex justify-center'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
     <path d="M8 5v14l11-7z"/>
   </svg></div>
     <img src={FilTerData.img} className='z-[2] relative' />

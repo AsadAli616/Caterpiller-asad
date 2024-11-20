@@ -41,7 +41,7 @@ export default function NaV2(){
         <Link href={"/"}>
              <span className="">Home</span>
              </Link>
-             <Link href={"/blog"}>
+             <Link href={"/about"}>
              <span className="">About</span>
              </Link>
              <Link href={"/playlist"}>
