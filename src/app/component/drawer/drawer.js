@@ -37,14 +37,14 @@ const Drawer1 = ({color}) => {
     <>
     <button className='flex px-1 rounded-full  py-1 justify-center items-center' onClick={showDrawer}>
    {
-    color==true?  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3e3e3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify">
+    color==true?  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3e3e3d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-align-justify">
     <line x1="21" y1="10" x2="3" y2="10"/>
     <line x1="21" y1="6" x2="3" y2="6"/>
     <line x1="21" y1="14" x2="3" y2="14"/>
     <line x1="21" y1="18" x2="3" y2="18"/>
 </svg>
 
-  : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-justify">
+  : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-align-justify">
     <line x1="21" y1="10" x2="3" y2="10"/>
     <line x1="21" y1="6" x2="3" y2="6"/>
     <line x1="21" y1="14" x2="3" y2="14"/>
@@ -64,13 +64,13 @@ const Drawer1 = ({color}) => {
       <Link href={"/"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>Home</li>
         </Link>
-        <Link href={"/blog"}>
+        <Link href={"/about"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>About</li>
         </Link>
         <Link href={"/playlist"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>Playlist</li>
         </Link>
-        <Link href={"/"}>
+        <Link href={"/blog"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>Blog</li>
         </Link>
         <Link href={"/contact"}>

@@ -1,43 +1,41 @@
-"use client";
-import {useRef,useState ,useEffect } from 'react'
-import '../Playpause/playlist.css'
-import Drawer1 from "../drawer/drawer";
+import { useRef,useEffect ,useCallback, useState } from 'react';
 import Link from 'next/link';
+import Drawer1 from '../drawer/drawer';
 
-
-
-
-
-
-
-
-export default function NaV2(){
+export default function Nav3(){
+    
     const audioRef = useRef();
 
-    useEffect(()=>{
-        audioRef.current= new Audio('/Bonita - Glory 320 Kbps.mp3')
-        
-    },[])
-    const [play ,setplay] =useState(false)
-    const [isPlaying, setIsPlaying] = useState(false);
-
-      const togglePlay = () => {
-        const audio = audioRef.current;
-        if (isPlaying) {
-          audio.pause();
-        } else {
-          audio.play();
-        }
-        setIsPlaying(!isPlaying);
-      };
-
-    return<>
-
-
-<div className="border-none  nav flex  border-none-black w-[90vw] mx-auto p-2 justify-between ">
+useEffect(()=>{
+    audioRef.current= new Audio('/Bonita - Glory 320 Kbps.mp3')
     
-    <img src="/Navlogo.png" className="w-[100px] h-auto" ></img>
-    <div className="xsm:hidden lg:flex text-[20px] cursor-pointer text-[#3e3e3d] font-[600] border-none border-none-black gap-8 h-full items-center text-center">
+},[])
+const [play ,setplay] =useState(false)
+const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+
+
+    
+    
+    
+    
+    
+    
+    return<>
+    <div className="border-none  nav flex absolute z-10 left-0 right-0  border-none-black w-[90vw] mx-auto p-2 justify-between ">
+    
+    <img src="/logo.png" className="xsm:w-[50px] md:w-[100px]  h-auto" ></img>
+    <div className="xsm:hidden lg:flex text-[20px] cursor-pointer text-white font-[600] border-none border-none-black gap-8 h-full items-center text-center">
         <Link href={"/"}>
              <span className="">Home</span>
              </Link>
@@ -100,5 +98,5 @@ className='w-1/4 flex py-3 justify-center bg-[#a083d7]  relative p-2   items-cen
 
     </div>
     </div>
-    </>
+</>
 }
