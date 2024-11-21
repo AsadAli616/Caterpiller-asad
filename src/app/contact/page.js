@@ -83,7 +83,7 @@ return<>
     </h1>
     <p className='text-[#453a5a]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit </p>
         </div>
-        <form method='POST' onSubmit={handleSubmit(onSubmit1)}>
+        <form  onSubmit={handleSubmit(onSubmit1)}>
    <div className='flex md:flex-row flex-col py-2 lg:px-4'><input {...register("Firstname" ,{ required: true, minLength:{value: 5 ,message:"Name must be at least 3 characters long"} })} name='Firstname' placeholder='First name'  className=' border text-[#5f5f5f] xsm:pl-2  mx-1 rounded-md lg:mx-2 md:py-2 md:px-2 border-[#262626] md:w-[50%] inline-flex my-3 xsm:py-3 ' type='text'/> <input placeholder='Last name'  className=' border xsm:pl-2  text-[#5f5f5f] mx-1 rounded-md lg:mx-2 md:py-2 md:px-2 border-[#262626] md:w-[50%] inline-flex my-3 xsm:py-3 ' type='text'/> </div>
    
    <div className='flex md:flex-row flex-col  lg:px-4' ><input {...register("Email",{ required: true, minLength: 14  })} placeholder='Email' name='Email' className=' border text-[#5f5f5f] xsm:pl-2  mx-1 rounded-md lg:mx-2  md:px-2 border-[#262626] md:w-[100%] inline-flex  xsm:py-3 ' type='email'/></div>
