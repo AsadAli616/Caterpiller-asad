@@ -60,11 +60,11 @@ tll1.to(Dive22.current,{
 
 },0).to(Dive33.current,{
   opacity: "1",
-  duration : "2"
+  duration : "3"
 
 },0).to(Dive44.current,{
   opacity: ".5",
-  duration : "2"
+  duration : "3"
 
 },.1)
 
@@ -372,7 +372,7 @@ Lorem ipsum dolor sit amet
     
     <div  className="md:p-2  w-[80%] mx-auto md:w-[25%] text-center">
 
-    <img src="/img3.png" className="hover:shadow-custom-purple"/>
+    <img src="/img1.png" className="hover:shadow-custom-purple"/>
 
     <h1 className="mt-2 text-[20px]">
 Lorem ipsum dolor sit amet 
@@ -390,7 +390,7 @@ Lorem ipsum dolor sit amet
     
 <div  className="md:p-2  w-[80%] mx-auto md:w-[25%] text-center">
 
-<img src="/img3.png" className="hover:shadow-custom-purple"/>
+<img src="/img2.png" className="hover:shadow-custom-purple"/>
 
 <h1 className="mt-2 text-[20px]">
 Lorem ipsum dolor sit amet 

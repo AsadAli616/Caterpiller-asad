@@ -15,7 +15,7 @@ console.log(typeof id)
  const FilTerData = data.find((res)=>res.id === id  )
 
  const FilTerbg = bg.find((res1)=>res1.id === id  )
-
+const [PLay , setPLay] = useState(false)
 
    const contentStyle = {
     backdropFilter: 'blur(12px)',  // Apply blur to the background
@@ -43,6 +43,7 @@ console.log(FilTerData)
       };
 
    return<>
+   
      <NaV2/>
 
     <div    className=' border-black w-[100vw] flex justify-center items-center h-[100vh] md:h-[140vh] relative '>
@@ -51,8 +52,16 @@ console.log(FilTerData)
         <div style={contentStyle} className='absolute h-[100vh] md:w-[100%] w-[100vw]  md:h-[140vh] z-[2]' ></div>
         <div className=' rounded-[20px] overflow-hidden border-black w-[80vw] md:w-[25%] relative flex flex-col z-[5]'>
     
-        <div style={contentStyle} onClick={()=>{togglePlay2()}} className='absolute text-white z-[4] border border-rounded lg:top-[10vw] top-[30vw] left-[30vw]   h-[80px] lg:left-[10vw] right-0 rounded-full w-[80px] items-center flex justify-center'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-    <path d="M8 5v14l11-7z"/>
+        <div style={contentStyle} onClick={()=>{togglePlay2()
+            setPLay(!PLay)
+        }} className='absolute text-white z-[4] border border-rounded lg:top-[10vw] top-[30vw] left-[30vw]   h-[80px] lg:left-[10vw] right-0 rounded-full w-[80px] items-center flex justify-center'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+    
+    {
+      PLay==false?<path d="M6 4l14 8-14 8z"/> :     <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+
+
+    }
+ 
   </svg></div>
     <img src={FilTerData.img} className='z-[2] relative' />
     <div className='bg-[#2e2e2e] text-center text-white p-4 pt-10 mt-[-20px]'> 

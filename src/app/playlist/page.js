@@ -8,7 +8,10 @@ export default function Playlist(){
 
 
     return<>
-    <div className='PLaylist_main_div'>
+    <div className='bg-white'> 
+
+  
+    <div className='PLaylist_main_div bg-white'>
 
     
    <NaV2/>
@@ -30,11 +33,8 @@ export default function Playlist(){
             
         <div key={data1.id} className=' p-4   border-black   md:w-[25%] sm:w-[50%] xsm:w-[100%]'>
             <Link href={`/playlist/${data1.id}`}>
-     <div className='op  border-black w-[18.5vw]  h-[46vh] bg-gray-900 rounded-2xl z-[-1] absolute '>
-       
-       <h1 id='text_3' className='text-[5vw] leading-[5vw] text-white  text-center mt-10 font-[900]' > Click Me !</h1>
-     </div>
-            <img src={data1.img} className='cp border border-red '/>
+     
+            <img src={data1.img} className=' border border-red '/>
             </Link>
             </div>
             ))
@@ -162,5 +162,6 @@ export default function Playlist(){
   </div>
   </div>
 </footer>
+</div>
     </>
 }
