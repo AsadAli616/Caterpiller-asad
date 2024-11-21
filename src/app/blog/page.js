@@ -50,7 +50,7 @@ export default function Blog(){
 
       </div>
    </div>
-   <div className="border-none border-none-black my-4   md:w-[70vw] mx-auto flex lg:flex-row flex-col justify-between"  >
+   <div className="border-none border-none-black my-4 xsm:w-[90vw]  md:w-[70vw] mx-auto flex lg:flex-row flex-col justify-between"  >
       <div className="lg:w-[50%] border-none border-none-black">
           <h1 className="md:text-[1.9vw] text-[6vw] leading-[6vw] font-[1000] md:leading-[2vw] tracking-tighter text-[#453a5a] ">LOREM IPSUM DOLOR SIT AMET</h1>
           <h1 className="text-[#a9a9a5] md:text-[1.3vw] text-[3vw] leading-[3vw] md:leading-[1.3vw] my-2 font-[500] tracking-tighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</h1>
@@ -61,7 +61,7 @@ export default function Blog(){
    </div>
 
 
-   <div className="upo border-none border-none-black my-8   items-center flex flex-col justify-center  w-[100vw] md:w-[90vw] mx-auto py-10 rounded-[20px] md:h-[50vh] ">
+   <div className="upo border-none border-none-black my-8 xsm:rounded-none    items-center flex flex-col justify-center  w-[100vw] md:w-[90vw] mx-auto py-10 md:rounded-[20px] md:h-[50vh] ">
    <div className="border-none border-none-black rounded-[20px] bg-transparent text-white  text-center text-[4vw] tracking-tighter     font-[900] leading-[4vw]">DONO &apos; T MISS ANY News!</div>
    <div className=" mx-auto w-[80%] md:w-[60vw] px-4 py-4 rounded-[10px]  border-none bg-white bg-opacity-50  border-none-black">
       <div className="rounded-[10px] bg-transparent ">

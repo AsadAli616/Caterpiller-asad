@@ -94,7 +94,7 @@ className='w-1/4 flex py-3 justify-center bg-[#a083d7]  relative p-2   items-cen
 </div>
     </div>
     <div className="lg:hidden">
-<Drawer1 color={true}/>
+<Drawer1 />
 
     </div>
     </div>

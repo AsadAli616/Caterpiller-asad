@@ -3,13 +3,76 @@ import {useRef,useState ,useEffect } from 'react'
 import './page.css'
 import '../component/Playpause/playlist.css'
 import NaV2 from '../component/nav2/nav2';
-
+import React from 'react';
+import { Button, message, Space } from 'antd';
+import { useForm } from "react-hook-form"
+import { LoadingOutlined } from '@ant-design/icons';
 
 const Contact = () =>{
-    
+  const [messageApi, contextHolder] = message.useMessage();
+const [loading , setloading] = useState(false)
+
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit1 = (data) => {
+    console.log(data)
+    sendEmail(data)
+    setloading(true)
+  }
+
+
+
+
+
+
+
+
+
+const sendEmail = async (data) => {
+  const added = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Email`, {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+  if (added.ok) {
+    success()
+    reset()
+        setloading(false)
+
+  }
+  else{
+    error()
+    setloading(false)
+
+  }
+};
+ const error = () => {
+    messageApi.open({
+      type: 'error',
+      content: 'This is an error message',
+    });
+  };
+
+const success = () => {
+  messageApi.open({
+    type: 'success',
+    content: 'This is a success message',
+  });
+};
+
 return<>
+{contextHolder}
+<div className='bg-white'>
+
+
  <NaV2/>
-    <div  className=' my-3  flex md:flex-row flex-col w-[90vw] md:w-[90vw] xsm:py-4 xsm:px-1 md:p-8 mx-auto'>
+    <div  className=' my-3 bg-white  flex md:flex-row flex-col w-[90vw] md:w-[90vw] xsm:py-4 xsm:px-1 md:p-8 mx-auto'>
     <div className='md:w-[50%]'><img src='/Contact_img.png' /></div>
     <div className='md:w-[50%] lg:pl-8'>
         <div className='flex xsm:my-3 md:my-0  flex-col px-2 lg:px-5'>
@@ -19,12 +82,14 @@ return<>
     </h1>
     <p className='text-[#453a5a]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit </p>
         </div>
-   <div className='flex md:flex-row flex-col py-2 lg:px-4'><input placeholder='First name'  className=' border text-[#5f5f5f] xsm:pl-2  mx-1 rounded-md lg:mx-2 md:py-2 md:px-2 border-[#262626] md:w-[50%] inline-flex my-3 xsm:py-3 ' type='text'/> <input placeholder='Last name'  className=' border xsm:pl-2  text-[#5f5f5f] mx-1 rounded-md lg:mx-2 md:py-2 md:px-2 border-[#262626] md:w-[50%] inline-flex my-3 xsm:py-3 ' type='text'/> </div>
+        <form method='POST' onSubmit={handleSubmit(onSubmit1)}>
+   <div className='flex md:flex-row flex-col py-2 lg:px-4'><input {...register("Firstname" ,{ required: true, minLength:{value: 5 ,message:"Name must be at least 3 characters long"} })} name='Firstname' placeholder='First name'  className=' border text-[#5f5f5f] xsm:pl-2  mx-1 rounded-md lg:mx-2 md:py-2 md:px-2 border-[#262626] md:w-[50%] inline-flex my-3 xsm:py-3 ' type='text'/> <input placeholder='Last name'  className=' border xsm:pl-2  text-[#5f5f5f] mx-1 rounded-md lg:mx-2 md:py-2 md:px-2 border-[#262626] md:w-[50%] inline-flex my-3 xsm:py-3 ' type='text'/> </div>
    
-   <div className='flex md:flex-row flex-col  lg:px-4' ><input placeholder='Email'  className=' border text-[#5f5f5f] xsm:pl-2  mx-1 rounded-md lg:mx-2  md:px-2 border-[#262626] md:w-[100%] inline-flex  xsm:py-3 ' type='text'/></div>
+   <div className='flex md:flex-row flex-col  lg:px-4' ><input {...register("Email",{ required: true, minLength: 14  })} placeholder='Email' name='Email' className=' border text-[#5f5f5f] xsm:pl-2  mx-1 rounded-md lg:mx-2  md:px-2 border-[#262626] md:w-[100%] inline-flex  xsm:py-3 ' type='email'/></div>
 
-   <div className='flex md:flex-row flex-col  lg:p-4' ><textarea placeholder='What is your query redarding?'  className='xsm:pl-2  border resize-none text-[#5f5f5f] mx-1 h-32 rounded-md lg:mx-2 xsm:my-4 md:my-0 md:px-2 border-[#262626] md:w-[100%] inline-flex  xsm:py-3 ' type='text'/></div>
-<div className='flex md:flex-row flex-col px-2 lg:px-5'><button className=' text-[12px] text-[white] rounded-md bg-[#453a5a] w-[100%] py-2'>SUBMIT</button></div>
+   <div className='flex md:flex-row flex-col  lg:p-4' ><textarea {...register("text")} name='text' placeholder='What is your query redarding?'  className='xsm:pl-2  border resize-none text-[#5f5f5f] mx-1 h-32 rounded-md lg:mx-2 xsm:my-4 md:my-0 md:px-2 border-[#262626] md:w-[100%] inline-flex  xsm:py-3 ' type='text'/></div>
+<div className='flex md:flex-row flex-col px-2 lg:px-5'>{loading==true?<div className='mx-auto'><LoadingOutlined/></div> : <button type='submit' className=' text-[12px] text-[white] rounded-md bg-[#453a5a] w-[100%] py-2'>submit</button>}</div>
+</form>
 <div className='flex md:flex-row flex-col p-4 lg:p-8'>
     <img src='/ContactLogos.png'/>
 </div>  
@@ -150,7 +215,7 @@ return<>
   </div>
   </div>
 </footer>
-
+</div>
 </>
 }
 export default Contact;

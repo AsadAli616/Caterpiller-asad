@@ -64,13 +64,13 @@ const Drawer1 = ({color}) => {
       <Link href={"/"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>Home</li>
         </Link>
-        <Link href={"/about"}>
+        <Link href={"/blog"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>About</li>
         </Link>
         <Link href={"/playlist"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>Playlist</li>
         </Link>
-        <Link href={"/blog"}>
+        <Link href={"/about"}>
         <li className=' border-black py-3 my-2 mx-3  rounded-lg text-[30px]'>Blog</li>
         </Link>
         <Link href={"/contact"}>
